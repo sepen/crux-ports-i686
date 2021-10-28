@@ -1,32 +1,38 @@
 # Description: LLVM compiler backend
 # URL:         http://llvm.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Tilman Sauerbeck, tilman at crux dot nu
-# Depends on:  python
+# Depends on:  cmake libxml2 ninja
 
 name=llvm
-version=3.6.0
+version=10.0.1
 release=1
-source=(http://llvm.org/releases/$version/$name-$version.src.tar.xz)
+source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz)
 
 build() {
+  export CC=gcc
+  export CXX=g++
+
   cd $name-$version.src
 
-  rm -rf tools/clang
+  mkdir build
+  cd build
 
-  ./configure --prefix=/usr \
-    --without-oprofile \
-    --enable-cxx11 \
-    --enable-targets=x86,r600 \
-    --enable-shared \
-    --mandir=/usr/man
+  cmake .. -G Ninja \
+    -DLLVM_PARALLEL_COMPILE_JOBS="${JOBS:-1}" \
+    -DLLVM_INCLUDE_EXAMPLES=0 \
+    -DLLVM_INCLUDE_TESTS=0 \
+    -DLLVM_ENABLE_FFI=1 \
+    -DLLVM_ENABLE_RTTI=1 \
+    -DLLVM_ENABLE_OCAMLDOC=0 \
+    -DLLVM_TARGETS_TO_BUILD='X86;AMDGPU;BPF' \
+    -DLLVM_BUILD_LLVM_DYLIB=1 \
+    -DLLVM_LINK_LLVM_DYLIB=1 \
+    -DLLVM_INSTALL_UTILS=1 \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DLLVM_APPEND_VC_REV=0 \
+    -Wno-dev
 
-  make $MAKEFLAGS
-  make DESTDIR=$PKG install
-
-  find $PKG -name .dir -delete
-  rm -rf $PKG/usr/docs
-
-  # remove example hello transform
-  rm $PKG/usr/lib/LLVMHello.so
+  ninja
+  DESTDIR=$PKG ninja install
 }

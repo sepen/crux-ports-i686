@@ -1,9 +1,8 @@
-1d06c7a6084db7710bec7215143c5799  CVE-2014-0475.patch
-e26b8cc666b162f999404b03970f14e4  glibc-2.19.tar.xz
+d1009809cac6819ca29c6b49b7dda7f8  glibc-2.28-1.patch
+c81d2388896379997bc359d4f2084239  glibc-2.28.tar.xz
 96156bec8e05de67384dc93e72bdc313  host.conf
 fbbc215a9b15ba4846f326cc88108057  hosts
-922519df77d72faea626ddc3854d6bad  iconv-gconv_trans.c.patch
-2297992bd1eb0d62211effafd84b6454  kernel-headers-3.12.tar.bz2
 f7fefce570a3c776e26e778c5e401490  ld.so.conf
+f13115826108e71a0fa9322b0cbb71d6  linux-4.19.24.tar.xz
 75931315bf9bc9be15a5e25e4ddd5f0d  nsswitch.conf
 acf9daad1ee85de5efd3543965596a63  resolv.conf
