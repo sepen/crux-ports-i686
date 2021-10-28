@@ -9,6 +9,7 @@ d:filesystem
 d:libgmp
 d:pkgutils
 d:binutils
+d:fetchmail
 d:firefox-bin
 d:llvm
 d:gobject-introspection
@@ -66,6 +67,9 @@ f:22f85d5cd6253b40538215de9080f183:pkgutils/Pkgfile
 f:26de61868229f218e385319f045fff51:binutils/.md5sum
 f:4cc75cecbc5a6b6244883b26f8e59e75:binutils/.footprint
 f:ab2f6659f63a16f8343ee831082a55c0:binutils/Pkgfile
+f:def8466b97efddae9317a07bb68c7b4a:fetchmail/.md5sum
+f:9843e771e138a4c59d25a572d29fb8c1:fetchmail/.footprint
+f:7de767b0f1cdb5b6e63c8a4956fa6a28:fetchmail/Pkgfile
 f:ea78bca5ecf5c7f9599838d43c61f283:firefox-bin/policies.json
 f:48c4e73fdcf740a9e455e42f61fc75d1:firefox-bin/firefox.desktop
 f:fe7673e7bf32075ca6e6791b043cb80a:firefox-bin/.md5sum
