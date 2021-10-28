@@ -1,8 +1,4 @@
-NOTE: This repository is no longer active.
-
-=========
-crux-i686
-=========
+# crux-i686
 
 Unofficial i686 Ports overlay for CRUX 3.5
 
