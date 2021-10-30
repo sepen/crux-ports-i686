@@ -33,9 +33,9 @@ f:f75ac605045939774b37adc7df94f23d:exim/.md5sum
 f:bbcdad15c6955dc944c2399b669d911a:exim/.footprint
 f:e45db399ab51b2d1cae14546d8df2f49:exim/Pkgfile
 f:788b81fd6fe798cfb8fc9ad75cf660c2:exim/exim-config.patch
-f:dc00ee8816339d1670c89d7a74c6085b:mesa3d/.md5sum
+f:6588d77cebf7380ff72d8176a2af1a13:mesa3d/.md5sum
 f:55d5379360d016eabdc69cda80868673:mesa3d/.footprint
-f:22b30ad1ea770e0a6a43fe9276b78f94:mesa3d/Pkgfile
+f:0c7fb774f34d6376fcbd1c6830f70ad4:mesa3d/Pkgfile
 f:a821b3306461b64c1d1a78935ee34ce7:openssl/.md5sum
 f:98abdfcce82fb8e5ed284653de925dff:openssl/.footprint
 f:91f85842d2118003ee465c34259047e6:openssl/mksslcert.sh
