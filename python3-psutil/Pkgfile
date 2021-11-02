@@ -1,0 +1,17 @@
+# Description: A cross-platform process and system utilities module for Python
+# URL: https://github.com/giampaolo/psutil
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: python3-setuptools
+
+name=python3-psutil
+version=5.7.3
+release=1
+source=(https://github.com/giampaolo/psutil/archive/release-$version/$name-release-$version.tar.gz)
+
+build() {
+  cd psutil-release-$version
+  
+  python3 setup.py build --build-lib=build/python
+  python3 setup.py build --build-lib=build/python \
+    install --root=$PKG --optimize=1 --skip-build
+}
