@@ -1,3 +1,7 @@
 README.md
-\.git
-*.httpup
+\.git*
+\.httpup*
+*~
+\.*~
+*work
+*.pkg.*
