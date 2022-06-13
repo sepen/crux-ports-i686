@@ -1,12 +1,12 @@
 # Description: The Go Programming Language
-# URL: https://golang.org/
+# URL: https://go.dev/
 # Maintainer: Jose Beneyto, sepen at crux dot nu
 
 name=go
-version=1.17.2
+version=1.18.3
 release=1
-source=(https://golang.org/dl/go${version}.src.tar.gz \
-        https://golang.org/dl/go${version}.linux-386.tar.gz)
+source=(https://go.dev/dl/go${version}.src.tar.gz \
+    https://go.dev/dl/go${version}.linux-386.tar.gz)
 
 unpack_source() {
     install -d $SRC/go${version}
@@ -17,16 +17,17 @@ unpack_source() {
 }
 
 build() {
-    export GOCACHE=$SRC/go-build
-    export GOROOT_BOOTSTRAP=$SRC/go${version}
+    export GOROOT_BOOTSTRAP=${SRC}/go${version}
     export GOROOT_FINAL=/usr/lib/go
+    export GOOS=linux
     export GOARCH=386
+    export GOCACHE=$SRC/go${version}
 
     cd go/src
     ./make.bash
 
     install -d $PKG/usr/lib
-    mv $SRC/go $PKG/usr/lib/
+    cp -r $SRC/go $PKG/usr/lib/
 
     install -d $PKG/usr/bin
     ln -s /usr/lib/go/bin/go $PKG/usr/bin/
