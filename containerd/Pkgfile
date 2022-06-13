@@ -1,6 +1,6 @@
 # Description: A daemon to control runC
 # URL: https://containerd.io/
-# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Maintainer: Matt Housh, jaeger at crux dot ninja
 # Depends on: go btrfs-progs git libseccomp
 
 name=containerd
