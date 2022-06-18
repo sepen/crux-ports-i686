@@ -115,9 +115,9 @@ f:9843e771e138a4c59d25a572d29fb8c1:fetchmail/.footprint
 f:7de767b0f1cdb5b6e63c8a4956fa6a28:fetchmail/Pkgfile
 f:ea78bca5ecf5c7f9599838d43c61f283:firefox-bin/policies.json
 f:48c4e73fdcf740a9e455e42f61fc75d1:firefox-bin/firefox.desktop
-f:2b3f023156fbccd65e676f890e9e9ffa:firefox-bin/.md5sum
-f:9a65b55ef893879407080fe1361ce863:firefox-bin/.footprint
-f:e52ff076c37e5a55b83ea8fe5bc78027:firefox-bin/Pkgfile
+f:ab6dbacd5544e1cddef47546f54fef91:firefox-bin/.md5sum
+f:b300547a82b2676f7a8cc46851c91644:firefox-bin/.footprint
+f:5f094b480b70674d516df8f2a8cadf15:firefox-bin/Pkgfile
 f:2c6bf25a88ae1b977652ecca17c46bea:llvm/README
 f:b1f1c9f57c9349af7cb61c7e3f7b8d29:llvm/.md5sum
 f:35ffbc986970fb79c8379b41c46a1a1b:llvm/.footprint
