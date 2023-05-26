@@ -3,7 +3,7 @@
 # Maintainer: Jose Beneyto, sepen at crux dot nu
 
 name=go
-version=1.18.3
+version=1.19.1
 release=1
 source=(https://go.dev/dl/go${version}.src.tar.gz \
     https://go.dev/dl/go${version}.linux-386.tar.gz)
@@ -14,6 +14,13 @@ unpack_source() {
         -C $SRC/go${version} --strip-components 1
     bsdtar -xf $PKGMK_SOURCE_DIR/go${version}.src.tar.gz \
         -C $SRC
+    # fix test sigfwd on x86 arch
+    sed -i $SRC/go/misc/cgo/testsigfwd/main.go \
+        -i $SRC/go${version}/misc/cgo/testsigfwd/main.go \
+        -e 's|^#cgo CFLAGS: -pthread|#cgo CFLAGS: -pthread -fno-stack-protector|'
+    sed -i $SRC/go/src/runtime/cgo/cgo.go \
+        -i $SRC/go${version}/src/runtime/cgo/cgo.go \
+        -e 's|^#cgo CFLAGS: -Wall -Werror|#cgo CFLAGS: -Wall -Werror -fno-stack-protector|'
 }
 
 build() {
@@ -21,7 +28,7 @@ build() {
     export GOROOT_FINAL=/usr/lib/go
     export GOOS=linux
     export GOARCH=386
-    export GOCACHE=$SRC/go${version}
+    export GOCACHE=${SRC}/go${version}
 
     cd go/src
     ./make.bash
