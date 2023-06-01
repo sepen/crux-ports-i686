@@ -1,0 +1,17 @@
+# Description: Python implementation of Markdown.
+# URL: https://pypi.org/project/markdown
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: python3-setuptools
+
+name=python3-markdown
+version=3.4.1
+release=1
+source=(https://files.pythonhosted.org/packages/85/7e/133e943e97a943d2f1d8bae0c5060f8ac50e6691754eb9dbe036b047a9bb/Markdown-$version.tar.gz)
+
+build() {
+  cd Markdown-$version
+
+  python3 setup.py build
+  python3 setup.py install --skip-build \
+    --optimize=1 --prefix=/usr --root=$PKG
+}
