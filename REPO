@@ -48,9 +48,9 @@ f:8d195bebd2a22dfe44e8f2d94f7abd0c:libgmp/Pkgfile
 f:15e9f474726f82926c53d7e91af750e8:libgmp/.md5sum
 f:bbf6d30f092c6d302f028679f1f9bfc3:libgmp/gmp.h
 f:3676fa07d39385398a87c15dd9034453:libgmp/.footprint
-f:a60c7fabe4409948eb1838a9fc96372f:python3-cairo/Pkgfile
-f:431dc70d96e2c0c2a5cd8456518d9b52:python3-cairo/.md5sum
-f:1ee83aca85bfc301c02c382d734f74ae:python3-cairo/.footprint
+f:dd03b6f999895be0d1f0b7514507ad57:python3-cairo/Pkgfile
+f:07df24ea7fa594aa35862aca9536a865:python3-cairo/.md5sum
+f:ecde118e496dd2bca15ad821c2db198a:python3-cairo/.footprint
 f:a4ec2a62991f1efe5e72c5701e497f6d:libaio/Pkgfile
 f:cf12a0b02e7f50e77a4c2f48872d0d28:libaio/.md5sum
 f:a77404c552c411c0819297e7ae3640a5:libaio/.footprint
