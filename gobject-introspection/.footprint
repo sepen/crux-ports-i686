@@ -2,6 +2,7 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/g-ir-annotation-tool
 -rwxr-xr-x	root/root	usr/bin/g-ir-compiler
+-rwxr-xr-x	root/root	usr/bin/g-ir-doc-tool
 -rwxr-xr-x	root/root	usr/bin/g-ir-generate
 -rwxr-xr-x	root/root	usr/bin/g-ir-inspect
 -rwxr-xr-x	root/root	usr/bin/g-ir-scanner
@@ -52,7 +53,7 @@ drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 drwxr-xr-x	root/root	usr/lib/gobject-introspection/
 drwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/__init__.py
--rwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/_giscanner.cpython-37m-i386-linux-gnu.so
+-rwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/_giscanner.cpython-38-i386-linux-gnu.so
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/_version.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/annotationmain.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/annotationparser.py
@@ -81,6 +82,7 @@ drwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/devdoc
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/devdocs/Gjs/interface.tmpl
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/devdocs/Gjs/method.tmpl
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/devdocs/Gjs/namespace.tmpl
+-rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/devdocs/meson.build
 drwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallard/
 drwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallard/C/
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallard/C/callback.tmpl
@@ -129,6 +131,7 @@ drwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallar
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallard/Python/vfunc.tmpl
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallard/base.tmpl
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallard/class.tmpl
+-rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallard/meson.build
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallard/namespace.tmpl
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/docwriter.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/dumper.py
@@ -136,7 +139,6 @@ drwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallar
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/girparser.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/girwriter.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/introspectablepass.py
--rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/libtoolimporter.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/maintransformer.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/mdextensions.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/message.py
@@ -203,5 +205,6 @@ drwxr-xr-x	root/root	usr/share/gobject-introspection-1.0/tests/
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/g-ir-compiler.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/g-ir-doc-tool.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/g-ir-generate.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/g-ir-scanner.1.gz
