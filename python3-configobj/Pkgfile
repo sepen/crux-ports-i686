@@ -1,0 +1,17 @@
+# Description: Python 3+ compatible port of the configobj library
+# URL: https://github.com/DiffSK/configobj
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: python3-six
+
+name=python3-configobj
+version=5.0.8
+release=1
+source=(https://github.com/DiffSK/configobj/archive/v$version/configobj-$version.tar.gz)
+
+build() {
+  cd configobj-$version
+
+  python3 setup.py build
+  python3 setup.py install \
+    --optimize=1 --root=$PKG --skip-build
+}
