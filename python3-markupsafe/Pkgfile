@@ -9,9 +9,9 @@ release=1
 source=(https://pypi.io/packages/source/M/MarkupSafe/MarkupSafe-$version.tar.gz)
 
 build() {
-	cd MarkupSafe-$version
+  cd MarkupSafe-$version
 
-	python3 setup.py build
-	python3 setup.py install \
+  python3 setup.py build
+  python3 setup.py install \
     --prefix=/usr --root=$PKG --optimize=1
 }
