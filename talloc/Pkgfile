@@ -1,10 +1,10 @@
 # Description: Hierarchical, reference counted memory pool system with destructors
-# URL:         https://talloc.samba.org/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  python3
+# URL: https://talloc.samba.org/
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: python3
 
 name=talloc
-version=2.3.1
+version=2.4.0
 release=1
 source=(https://samba.org/ftp/$name/$name-$version.tar.gz
         $name-man-pages.tar.xz)
