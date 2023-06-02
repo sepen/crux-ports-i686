@@ -78,10 +78,10 @@ f:62f6bf5cde8b52db82c8190406e2f03b:code/code.desktop
 f:0e8dd9cec19d28b2d593db37f613604e:python3-cffi/.md5sum
 f:6b7fc6470790b43bd1014c1245730b1c:python3-cffi/.footprint
 f:c51cbbf758cc9439d585a5da46b9dd90:python3-cffi/Pkgfile
-f:7f0f5f749aa67207754a9fbba12109da:talloc/.md5sum
-f:a660a881f26fb5f2d8fa6a3df237f0cb:talloc/.footprint
+f:b35ba8997e40ae0c9f7eca172ea8ba00:talloc/.md5sum
+f:01fa96e493c2c8e9f0594a0d58e1fa8b:talloc/.footprint
 f:365edd7d92b98bb9790ed0eeb3c4d2b3:talloc/talloc-man-pages.tar.xz
-f:a6b0c507301ee74c0dc0f9309249b2dd:talloc/Pkgfile
+f:c4535513479c7d6eb85a1a363e3e02c2:talloc/Pkgfile
 f:07df24ea7fa594aa35862aca9536a865:python3-cairo/.md5sum
 f:ecde118e496dd2bca15ad821c2db198a:python3-cairo/.footprint
 f:dd03b6f999895be0d1f0b7514507ad57:python3-cairo/Pkgfile
