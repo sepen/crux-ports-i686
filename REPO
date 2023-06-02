@@ -22,6 +22,7 @@ d:util-linux
 d:python
 d:firefox-bin
 d:nss
+d:python3-six
 d:python3
 d:rust-bin
 d:exim
@@ -30,6 +31,7 @@ d:python3-pip
 d:glibc
 d:python3-yaml
 d:meson
+d:python3-configobj
 d:python3-setuptools
 d:filesystem
 d:go
@@ -131,6 +133,9 @@ f:9ad2a26c137208ff292061143c7cc227:nss/nss-util.pc.in
 f:c3d262683b32cfd526bd3b3d144d4154:nss/nss-3.58-no-plt.patch
 f:e2f6778e8319504afd217daf31314d37:nss/Pkgfile
 f:bf2ff51cef976ccd0a4832835eec8195:nss/nss-softokn.pc.in
+f:4369f6d8203fc117a88764b722b09cc0:python3-six/.md5sum
+f:8135526ed6ee1ceee0e2b9d47cf052a5:python3-six/.footprint
+f:fb55d1d9afe0d5abd31829f881ad4db1:python3-six/Pkgfile
 f:92c33f28705557ad9a20aecf93494cf8:python3/.md5sum
 f:de47fefd2856a27b88069e372c2bc09b:python3/.footprint
 f:40119f4b0ba639d7b3ba3895d48bf621:python3/Pkgfile
@@ -167,6 +172,9 @@ f:f444b86a2caad74f181aa4efb41c8523:python3-yaml/Pkgfile
 f:855d8276ad6aa45282d8206ac3587a1a:meson/.md5sum
 f:a1e28cabf623bee5e6c8f11d4607f070:meson/.footprint
 f:34a1c9d84f23239ca51a7bc5e22eae4d:meson/Pkgfile
+f:49353b37711e35dd8b5078ae30fddcdf:python3-configobj/.md5sum
+f:7080a6dcc3ba41199c7abf7d90ccceaa:python3-configobj/.footprint
+f:d03e8e71c7d1c5fc0a951c5947783cbe:python3-configobj/Pkgfile
 f:499936334b57f71d80bcdf761689ab6a:python3-setuptools/.md5sum
 f:185d0902b2a4602197a103c442058ceb:python3-setuptools/.footprint
 f:ea335cba0279bee85c03df34d160b3b1:python3-setuptools/Pkgfile
