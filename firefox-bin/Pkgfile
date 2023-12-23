@@ -1,10 +1,10 @@
 # Description: Firefox binary
 # URL: http://www.mozilla.com
-# Maintainer: Fredrik Rinnestam, fredrik at crux dot guru
+# Maintainer: Jose Beneyto, sepen at crux dot nu
 # Depends on: gtk3 dbus-glib
 
 name=firefox-bin
-version=104.0.2
+version=119.0.1
 release=1
 source=(http://ftp.mozilla.org/pub/firefox/releases/$version/linux-i686/en-US/firefox-$version.tar.bz2 \
 	policies.json firefox.desktop)
