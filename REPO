@@ -1,3 +1,4 @@
+d:ca-certificates
 d:exim
 d:python3-pyrsistent
 d:python3
@@ -43,6 +44,10 @@ d:containerd
 d:python3-markdown
 d:python3-gobject
 d:openssl
+f:e42ebb910f733f95aa80179b20aa100c:ca-certificates/Pkgfile
+f:b9e3d56125cb82aa9b9342be38d262b3:ca-certificates/.footprint
+f:1e305b4e910d204ab7b4c18ec0cf0f27:ca-certificates/cacert.pem
+f:d07ad427c6dcd45446e271db5166c871:ca-certificates/.md5sum
 f:2e73c992dc8491a33f225efbe4da9e32:exim/exim
 f:e45db399ab51b2d1cae14546d8df2f49:exim/Pkgfile
 f:bbcdad15c6955dc944c2399b669d911a:exim/.footprint
