@@ -1,0 +1,31 @@
+# Description: a general-purpose command-line fuzzy finder
+# URL: https://github.com/junegunn/fzf/
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: go
+
+name=fzf
+version=0.44.1
+release=1
+source=(https://github.com/junegunn/fzf/archive/$version/$name-$version.tar.gz)
+
+build() {
+  cd $name-$version
+
+  export CGO_CFLAGS="${CFLAGS}"
+  export CGO_CXXFLAGS="${CXXFLAGS}"
+  export CGO_CPPFLAGS="${CPPFLAGS}"
+  export CGO_LDFLAGS="${LDFLAGS}"
+
+  export GOPATH="$(pwd)/go"
+
+  go build \
+    -trimpath \
+    -buildmode=pie \
+    -mod=readonly \
+    -modcacherw \
+    -o $name .
+  go build -o $name .
+
+  install -D -m 0755 $name $PKG/usr/bin/$name
+  install -D -m 0755 bin/$name-tmux $PKG/usr/bin/$name-tmux
+}
