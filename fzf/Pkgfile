@@ -4,9 +4,9 @@
 # Depends on: go
 
 name=fzf
-version=0.44.1
+version=0.65.2
 release=1
-source=(https://github.com/junegunn/fzf/archive/$version/$name-$version.tar.gz)
+source=(https://github.com/junegunn/fzf/archive/v$version/$name-$version.tar.gz)
 
 build() {
   cd $name-$version
