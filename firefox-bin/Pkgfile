@@ -4,9 +4,9 @@
 # Depends on: gtk3 dbus-glib
 
 name=firefox-bin
-version=133.0
+version=140.0.4
 release=1
-source=(http://ftp.mozilla.org/pub/firefox/releases/$version/linux-i686/en-US/firefox-$version.tar.bz2 \
+source=(http://ftp.mozilla.org/pub/firefox/releases/$version/linux-i686/en-US/firefox-$version.tar.xz \
 	policies.json firefox.desktop)
 
 build() {
@@ -19,8 +19,6 @@ build() {
 	mkdir -p $PKG/etc/revdep.d
 	echo "/usr/lib/firefox" > $PKG/etc/revdep.d/firefox-bin
 
-	#We don't want these 'features'
-	rm -r $PKG/usr/lib/firefox/browser/features
 	# Disable autoupdate
 	mkdir $PKG/usr/lib/firefox/distribution
 
