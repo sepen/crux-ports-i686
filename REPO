@@ -17,6 +17,7 @@ d:python3-cffi
 d:gobject-introspection
 d:thunderbird-bin
 d:rust-bin
+d:xterm
 d:code
 d:glibc
 d:python3-mako
@@ -98,9 +99,9 @@ f:49353b37711e35dd8b5078ae30fddcdf:python3-configobj/.md5sum
 f:7080a6dcc3ba41199c7abf7d90ccceaa:python3-configobj/.footprint
 f:d03e8e71c7d1c5fc0a951c5947783cbe:python3-configobj/Pkgfile
 f:ea78bca5ecf5c7f9599838d43c61f283:firefox-bin/policies.json
-f:85bfe3accf397cc2afdac6d3a22ce17c:firefox-bin/.md5sum
-f:5fc52e3259cd2eea5b18e5d7a21936b5:firefox-bin/.footprint
-f:d1f460fdb1f6d041fd0c157e6cc6c261:firefox-bin/Pkgfile
+f:621a953fb588607dbc3ba3258b3a8711:firefox-bin/.md5sum
+f:4149409a45e1c6416db222d87085c3b0:firefox-bin/.footprint
+f:fd528ec57524d3a1a2f38c640c1fcc43:firefox-bin/Pkgfile
 f:48c4e73fdcf740a9e455e42f61fc75d1:firefox-bin/firefox.desktop
 f:0e8dd9cec19d28b2d593db37f613604e:python3-cffi/.md5sum
 f:6b7fc6470790b43bd1014c1245730b1c:python3-cffi/.footprint
@@ -117,6 +118,9 @@ f:a68528b0fd1e5420b6f851ae579e97a4:rust-bin/.nostrip
 f:e1b83cfae8655f25b38b8e92d86eee1e:rust-bin/.md5sum
 f:2346b81c92e0a6f2db004b804b63e0fe:rust-bin/.footprint
 f:401fa1dd7af90a1bd7bff24905fbd1ae:rust-bin/Pkgfile
+f:00b2ed8b35795c543171e246aef413fe:xterm/.md5sum
+f:4bc90e52e331e5f8b4b8a6a01d3ae470:xterm/.footprint
+f:85a376805b10aa23fd1f541404ca49a3:xterm/Pkgfile
 f:c5be321882104ffa49c326a1c2f491e0:code/.md5sum
 f:3565119168a5987efb4948905798deb3:code/.footprint
 f:e2a007b57142ee22407486e40c6f1066:code/Pkgfile
