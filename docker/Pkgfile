@@ -4,65 +4,69 @@
 # Depends on: containerd runc btrfs-progs cgroupfs-mount
 
 name=docker
-version=20.10.16
+version=28.3.3
 release=1
-
 source=(https://github.com/moby/moby/archive/v${version}/moby-${version}.tar.gz \
-    https://github.com/docker/cli/archive/v${version}/cli-${version}.tar.gz \
-    http://jaeger.morpheus.net/linux/crux/files/$name-man-pages-$version.tar.xz \
-    http://jaeger.morpheus.net/linux/crux/files/libnetwork-339b972.tar.xz \
-    $name.rc $name.conf)
+  https://github.com/docker/cli/archive/v${version}/cli-${version}.tar.gz \
+  https://crux.nu/files/$name-man-pages-$version.tar.xz \
+  $name.rc $name.conf)
 
 build() {
-    export GO111MODULE=auto
-    export GOPATH=$SRC
-    export DOCKER_GITCOMMIT=906f57f
-    export DOCKER_BUILDTAGS='seccomp'
-    export DISABLE_WARN_OUTSIDE_CONTAINER=1
+  export GO111MODULE=auto
+  export GOPATH=$SRC
+  export DOCKER_GITCOMMIT=e77ff99
+  export DOCKER_BUILDTAGS='seccomp'
+  export DISABLE_WARN_OUTSIDE_CONTAINER=1
+  export CGO_ENABLED=1
+  export CGO_CFLAGS="${CFLAGS}"
+  export CGO_CPPFLAGS="${CPPFLAGS}"
+  export CGO_CXXFLAGS="${CXXFLAGS}"
+  export CGO_LDFLAGS="${LDFLAGS}"
+  export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw -ldflags=-linkmode=external"
 
-    mkdir -p src/github.com/docker
+  mkdir -p src/github.com/docker
 
-    pushd src/github.com/docker
-    ln -s $SRC/cli-$version cli
-    pushd cli
-    make VERSION=$version dynbinary
-    popd
-    popd
+  pushd src/github.com/docker
+  ln -s $SRC/cli-$version cli
+  pushd cli
+  make VERSION=$version GITCOMMIT=${DOCKER_GITCOMMIT} dynbinary
+  popd
+  popd
 
-    pushd src/github.com/docker
-    ln -s $SRC/moby-$version docker
-    pushd docker
-    VERSION=$version hack/make.sh dynbinary
-    popd
-    popd
+  pushd src/github.com/docker
+  ln -s $SRC/moby-$version docker
+  pushd docker
+  VERSION=$version hack/make.sh dynbinary
+  popd
+  popd
 
-    install -D -m 0755 cli-$version/build/$name $PKG/usr/bin/$name
-    install -D -m 0755 moby-$version/bundles/dynbinary-daemon/dockerd-$version \
-        $PKG/usr/bin/dockerd
+  install -D -m 0755 cli-$version/build/$name $PKG/usr/bin/$name
+  install -D -m 0755 moby-$version/bundles/dynbinary-daemon/dockerd \
+    $PKG/usr/bin/dockerd
+  install -D -m 0755 moby-$version/bundles/dynbinary-daemon/docker-proxy \
+    $PKG/usr/bin/docker-proxy
 
-    (cd ..; \
-        GOROOT=/usr/lib/go GOPATH=${PKGMK_WORK_DIR} go build -o $PKG/usr/bin/$name-proxy \
-            libnetwork-339b972/cmd/proxy)
+  for M in 1 5; do
+    install -d -m 0755 $PKG/usr/share/man/man${M}
+    install -m 0644 $SRC/man${M}/* $PKG/usr/share/man/man${M}/
+  done
 
-    for M in 1 5 8; do
-        install -d -m 0755 $PKG/usr/share/man/man${M}
-        install -m 0644 $SRC/man${M}/* $PKG/usr/share/man/man${M}/
-    done
+  install -D -m 0755 $SRC/$name.rc \
+    $PKG/etc/rc.d/$name
+  install -D -m 0644 $SRC/$name.conf \
+    $PKG/etc/$name.conf
 
-    install -D -m 0755 $SRC/$name.rc \
-        $PKG/etc/rc.d/$name
-    install -D -m 0644 $SRC/$name.conf \
-        $PKG/etc/$name.conf
+  ln -s containerd $PKG/usr/bin/docker-containerd
+  ln -s containerd-shim $PKG/usr/bin/docker-containerd-shim
+  ln -s ctr $PKG/usr/bin/docker-containerd-ctr
+  ln -s runc $PKG/usr/bin/docker-runc
 
-    ln -s containerd $PKG/usr/bin/docker-containerd
-    ln -s containerd-shim $PKG/usr/bin/docker-containerd-shim
-    ln -s ctr $PKG/usr/bin/docker-containerd-ctr
-    ln -s runc $PKG/usr/bin/docker-runc
+  install -D -m 0755 moby-$version/contrib/check-config.sh \
+    $PKG/usr/share/$name/check-config.sh
+  install -D -m 0644 moby-$version/contrib/udev/80-$name.rules \
+    $PKG/etc/udev/rules.d/80-$name.rules
+  install -D -m 0644 cli-$version/contrib/completion/bash/docker \
+    $PKG/etc/bash_completion.d/docker
 
-    install -D -m 0755 moby-$version/contrib/check-config.sh \
-        $PKG/usr/share/$name/check-config.sh
-    install -D -m 0644 moby-$version/contrib/udev/80-$name.rules \
-        $PKG/etc/udev/rules.d/80-$name.rules
-    install -D -m 0644 cli-$version/contrib/completion/bash/docker \
-        $PKG/etc/bash_completion.d/docker
+  mkdir -p $PKG/usr/lib/docker/cli-plugins
 }

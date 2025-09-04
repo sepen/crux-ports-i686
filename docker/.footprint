@@ -16,12 +16,16 @@ lrwxrwxrwx	root/root	usr/bin/docker-containerd-shim -> containerd-shim
 -rwxr-xr-x	root/root	usr/bin/docker-proxy
 lrwxrwxrwx	root/root	usr/bin/docker-runc -> runc
 -rwxr-xr-x	root/root	usr/bin/dockerd
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/docker/
+drwxr-xr-x	root/root	usr/lib/docker/cli-plugins/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/docker/
 -rwxr-xr-x	root/root	usr/share/docker/check-config.sh
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/docker-attach.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/docker-bake.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-build.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-builder-build.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-builder-prune.1.gz
@@ -68,6 +72,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/docker-context-inspect.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-context-ls.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-context-rm.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/docker-context-show.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-context-update.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-context-use.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-context.1.gz
@@ -160,6 +165,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/docker-service-scale.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-service-update.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-service.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/docker-stack-config.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-stack-deploy.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-stack-ls.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-stack-ps.1.gz
@@ -203,11 +209,10 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/docker-volume-ls.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-volume-prune.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-volume-rm.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/docker-volume-update.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-volume.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker-wait.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/docker.1.gz
 drwxr-xr-x	root/root	usr/share/man/man5/
 -rw-r--r--	root/root	usr/share/man/man5/Dockerfile.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/docker-config-json.5.gz
-drwxr-xr-x	root/root	usr/share/man/man8/
--rw-r--r--	root/root	usr/share/man/man8/dockerd.8.gz

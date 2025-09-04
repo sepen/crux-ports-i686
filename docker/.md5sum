@@ -1,6 +1,5 @@
-8ab368d7125d6a9a610e78c270865939  cli-20.10.16.tar.gz
-49393dbeb1a5ef1e34eb07309ddd67db  docker-man-pages-20.10.16.tar.xz
+846b5cd28aa1404a250c6c4c2dcee69d  cli-28.3.3.tar.gz
+e8223a9a4159a53c2e4f2b7da816b14a  docker-man-pages-28.3.3.tar.xz
 639d3af72199001bb612e545335a67a3  docker.conf
 d83f39cc5876fed6daecfbd28cfed4c1  docker.rc
-e16e895d5613b5a7247b12b9f8a3cd89  libnetwork-339b972.tar.xz
-8e5abad5c50c57d14fa1a4a1ae4f3de5  moby-20.10.16.tar.gz
+42c69aed8c8d22405dbc5088993d12ba  moby-28.3.3.tar.gz
