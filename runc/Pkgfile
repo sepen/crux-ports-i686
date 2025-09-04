@@ -7,7 +7,7 @@ name=runc
 version=1.3.0
 release=1
 source=(https://github.com/opencontainers/runc/archive/v${version}/$name-${version}.tar.gz \
-    http://jaeger.morpheus.net/linux/crux/files/$name-man-pages-$version.tar.xz)
+    https://crux.nu/files/$name-man-pages-$version.tar.xz)
 
 build() {
   mkdir -pv src/github.com/opencontainers
