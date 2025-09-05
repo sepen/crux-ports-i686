@@ -1,0 +1,26 @@
+# Description: Code editing. Redefined.
+# URL: https://code.visualstudio.com/
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: alsa-lib gtk3 nss xorg-libxcomposite xorg-libxcursor xorg-libxinerama xorg-libxscrnsaver
+
+name=vscode
+version=1.35.1
+release=1
+source=(https://update.code.visualstudio.com/$version/linux-ia32/stable \
+  $name.desktop $name.png)
+
+unpack_source() {
+  tar -xf $PKGMK_SOURCE_DIR/stable -C $SRC
+  cp $name.desktop $name.png $SRC
+}
+
+build() {
+  install -d -m 0755 $PKG/usr/share
+  mv VSCode-linux-ia32 $PKG/usr/share/$name
+ 
+  install -d -m 0755 $PKG/usr/bin
+  ln -sf /usr/share/$name/bin/$name $PKG/usr/bin/$name
+
+  install -D -m 0644 $SRC/$name.png $PKG/usr/share/pixmaps/$name.png
+  install -D -m 0644 $SRC/$name.desktop $PKG/usr/share/applications/$name.desktop
+}

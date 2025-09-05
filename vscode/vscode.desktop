@@ -2,11 +2,11 @@
 Name=Visual Studio Code
 Comment=Code Editing. Redefined.
 GenericName=Text Editor
-Exec=/usr/share/code/code --unity-launch %F
-Icon=code
+Exec=/usr/share/vscode/bin/vscode --unity-launch %F
+Icon=vscode
 Type=Application
 StartupNotify=false
-StartupWMClass=Code
+StartupWMClass=VSCode
 Categories=TextEditor;Development;IDE;
 MimeType=text/plain;inode/directory;application/x-code-workspace;
 Actions=new-empty-window;
@@ -14,5 +14,5 @@ Keywords=vscode;
 
 [Desktop Action new-empty-window]
 Name=New Empty Window
-Exec=/usr/share/code/code --new-window %F
+Exec=/usr/share/vscode/bin/vscode --new-window %F
 Icon=com.visualstudio.code
