@@ -1,10 +1,10 @@
 # Description: Compose is a tool for defining and running multi-container Docker applications
 # URL: https://docs.docker.com/compose/
-# Maintainer: Matt Housh, jaeger at crux dot ninja
+# Maintainer: Jose Beneyto, sepen at crux dot nu
 # Depends on: go
 
 name=docker-compose
-version=2.6.0
+version=2.39.2
 release=1
 source=(https://github.com/docker/compose/archive/v$version/$name-$version.tar.gz)
 
@@ -12,7 +12,11 @@ build() {
 	export CGO_CFLAGS="${CFLAGS}"
 	export CGO_CPPFLAGS="${CXXFLAGS}"
 	export CGO_CXXFLAGS="${CXXFLAGS}"
+
 	cd compose-$version
-	go build -trimpath -o ${name} ./cmd
-	install -Dm0755 ${name} ${PKG}/usr/bin/${name}
+  make VERSION=v$version
+
+  install -Dm0755 bin/build/${name} ${PKG}/usr/bin/${name}
+  install -dm0755 ${PKG}/usr/lib/docker/cli-plugins
+  ln -s /usr/bin/docker-compose ${PKG}/usr/lib/docker/cli-plugins/
 }
