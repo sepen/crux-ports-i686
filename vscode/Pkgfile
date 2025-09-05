@@ -17,6 +17,10 @@ unpack_source() {
 build() {
   install -d -m 0755 $PKG/usr/share
   mv VSCode-linux-ia32 $PKG/usr/share/$name
+
+  mv $PKG/usr/share/$name/{code,$name}
+  mv $PKG/usr/share/$name/bin/{code,$name}
+  sed 's|/code|/vscode|g' -i $PKG/usr/share/$name/bin/$name
  
   install -d -m 0755 $PKG/usr/bin
   ln -sf /usr/share/$name/bin/$name $PKG/usr/bin/$name

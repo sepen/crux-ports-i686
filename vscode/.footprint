@@ -8,9 +8,8 @@ drwxr-xr-x	root/root	usr/share/pixmaps/
 -rw-r--r--	root/root	usr/share/pixmaps/vscode.png
 drwxr-xr-x	1001/1001	usr/share/vscode/
 drwxr-xr-x	1001/1001	usr/share/vscode/bin/
--rwxr-xr-x	1001/117	usr/share/vscode/bin/code
+-rwxr-xr-x	1001/117	usr/share/vscode/bin/vscode
 -rw-r--r--	1001/1001	usr/share/vscode/blink_image_resources_200_percent.pak
--rwxr-xr-x	1001/1001	usr/share/vscode/code
 -rw-r--r--	1001/1001	usr/share/vscode/content_resources_200_percent.pak
 -rw-r--r--	1001/1001	usr/share/vscode/content_shell.pak
 -rw-r--r--	1001/1001	usr/share/vscode/icudtl.dat
@@ -1754,3 +1753,4 @@ drwxr-xr-x	1001/1001	usr/share/vscode/resources/app/resources/linux/
 -rw-r--r--	1001/1001	usr/share/vscode/ui_resources_200_percent.pak
 -rw-r--r--	1001/1001	usr/share/vscode/v8_context_snapshot.bin
 -rw-r--r--	1001/1001	usr/share/vscode/views_resources_200_percent.pak
+-rwxr-xr-x	1001/1001	usr/share/vscode/vscode
