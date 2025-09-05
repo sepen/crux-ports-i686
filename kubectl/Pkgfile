@@ -1,0 +1,18 @@
+# Description:
+# URL:
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: git go
+
+name=kubectl
+version=1.34.0
+release=1
+source=()
+
+build() {
+  git clone --depth 1 --branch v1.30.0 \
+    https://github.com/kubernetes/kubernetes.git
+  cd kubernetes
+
+  GOOS=linux GOARCH=386 go build -o $name ./cmd/kubectl
+  install -D -m 0755 $name $PKG/usr/bin/$name
+}
