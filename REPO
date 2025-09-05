@@ -1,3 +1,4 @@
+d:kubectl
 d:prt-get
 d:fzf
 d:libseccomp
@@ -19,7 +20,6 @@ d:gobject-introspection
 d:thunderbird-bin
 d:rust-bin
 d:xterm
-d:code
 d:glibc
 d:python3-mako
 d:binutils
@@ -29,6 +29,7 @@ d:go
 d:filesystem
 d:talloc
 d:python3
+d:vscode
 d:ca-certificates
 d:python3-cython
 d:nss
@@ -46,6 +47,9 @@ d:libgmp
 d:fetchmail
 d:docker-compose
 d:openssl11
+f:d41d8cd98f00b204e9800998ecf8427e:kubectl/.md5sum
+f:35e4f1d89c9d584883cb9d78ba610b23:kubectl/.footprint
+f:dc4d50295b6f2b14e25dc22a01c6e01f:kubectl/Pkgfile
 f:22d00fe5aba73907e16e894930e16980:prt-get/prt-get.conf
 f:18e6b3b417d3360a52e251b2c55018bc:prt-get/.md5sum
 f:7459342d9dc9f032d9aeb5d7d19bbe32:prt-get/.footprint
@@ -125,11 +129,6 @@ f:401fa1dd7af90a1bd7bff24905fbd1ae:rust-bin/Pkgfile
 f:00b2ed8b35795c543171e246aef413fe:xterm/.md5sum
 f:4bc90e52e331e5f8b4b8a6a01d3ae470:xterm/.footprint
 f:85a376805b10aa23fd1f541404ca49a3:xterm/Pkgfile
-f:c5be321882104ffa49c326a1c2f491e0:code/.md5sum
-f:3565119168a5987efb4948905798deb3:code/.footprint
-f:e2a007b57142ee22407486e40c6f1066:code/Pkgfile
-f:62f6bf5cde8b52db82c8190406e2f03b:code/code.desktop
-f:04c4c453a76effa2d794fd6037fb1412:code/code.png
 f:fbbc215a9b15ba4846f326cc88108057:glibc/hosts
 f:62694f1d89005bb0e54bc9e3bbd0f4f7:glibc/post-install
 f:f7fefce570a3c776e26e778c5e401490:glibc/ld.so.conf
@@ -177,6 +176,11 @@ f:365edd7d92b98bb9790ed0eeb3c4d2b3:talloc/talloc-man-pages.tar.xz
 f:92c33f28705557ad9a20aecf93494cf8:python3/.md5sum
 f:de47fefd2856a27b88069e372c2bc09b:python3/.footprint
 f:40119f4b0ba639d7b3ba3895d48bf621:python3/Pkgfile
+f:fb1d97d1977f4cb8175d21d8380941f8:vscode/.md5sum
+f:65ebbb658a592a8035a986978ecfa356:vscode/.footprint
+f:04c4c453a76effa2d794fd6037fb1412:vscode/vscode.png
+f:4e47e2bd44c2a8c53c1e155bb942fe8a:vscode/vscode.desktop
+f:c5d426a7878e7672b487333275d43811:vscode/Pkgfile
 f:f586a2260272a64e67aef3526353dcd4:ca-certificates/cacert.pem
 f:8ca79953bb48669872aea19ffa93810d:ca-certificates/.md5sum
 f:b9e3d56125cb82aa9b9342be38d262b3:ca-certificates/.footprint
