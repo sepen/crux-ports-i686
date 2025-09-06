@@ -4,6 +4,7 @@ d:fzf
 d:libseccomp
 d:python3-six
 d:python3-setuptools
+d:cmake
 d:python3-pyrsistent
 d:python
 d:util-linux
@@ -71,6 +72,9 @@ f:fb55d1d9afe0d5abd31829f881ad4db1:python3-six/Pkgfile
 f:499936334b57f71d80bcdf761689ab6a:python3-setuptools/.md5sum
 f:185d0902b2a4602197a103c442058ceb:python3-setuptools/.footprint
 f:ea335cba0279bee85c03df34d160b3b1:python3-setuptools/Pkgfile
+f:f85bb533f78d5955e538e408115a180d:cmake/.md5sum
+f:bb6d9d1ddfb426f15675fcb72461ce56:cmake/.footprint
+f:59699770a52e974ab2291667016fefdd:cmake/Pkgfile
 f:eccead1bb019fc8465be33427ba8eb42:python3-pyrsistent/.md5sum
 f:fb5aa5dcc86c7681d1d1cde0313062f0:python3-pyrsistent/.footprint
 f:d9d7588773df94c6fe93ea2980ef5489:python3-pyrsistent/Pkgfile
