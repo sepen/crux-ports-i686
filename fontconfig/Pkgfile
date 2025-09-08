@@ -1,0 +1,36 @@
+# Description: A library for configuring and customizing font access
+# URL: https://www.freedesktop.org/wiki/Software/fontconfig/
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: freetype
+
+name=fontconfig
+version=2.17.1
+release=2
+source=(https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/$version/fontconfig-$version.tar.xz)
+
+build() {
+  meson setup $name-$version build \
+    --prefix=/usr \
+    --buildtype=plain \
+    --wrap-mode=nodownload \
+    -D b_lto=true \
+    -D b_pie=true \
+    -D doc=disabled \
+    -D nls=disabled \
+    -D tests=disabled \
+    -D cache-build=disabled
+  meson compile -C build -j ${JOBS:-1}
+  DESTDIR=$PKG meson install -C build
+
+  # Install pre-generated man-pages:
+  install -D -m 0644 -t "$PKG/usr/share/man/man1" "$name-$version"/doc/*.1
+  install -D -m 0644 -t "$PKG/usr/share/man/man3" "$name-$version"/doc/*.3
+  install -D -m 0644 -t "$PKG/usr/share/man/man5" "$name-$version"/doc/*.5
+
+  # Enabling autohinting by default
+  pushd $PKG/etc/fonts/conf.d
+  ln -sf ../../../usr/share/fontconfig/conf.avail/10-autohint.conf
+  popd
+
+  rm -f $PKG/etc/fonts/conf.d/README
+}
