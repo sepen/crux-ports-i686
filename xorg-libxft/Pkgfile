@@ -1,0 +1,18 @@
+# Description: X font rendering client library
+# URL: https://xorg.freedesktop.org
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: harfbuzz
+
+name=xorg-libxft
+version=2.3.9
+release=1
+source=(https://www.x.org/releases/individual/lib/libXft-$version.tar.xz)
+
+build() {
+  cd libXft-$version
+
+  ./configure --prefix=/usr
+
+  make
+  make DESTDIR=$PKG install
+}
