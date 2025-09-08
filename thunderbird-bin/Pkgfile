@@ -4,10 +4,9 @@
 # Depends on: gtk3 dbus-glib
 
 name=thunderbird-bin
-version=102.2.2
+version=142.0
 release=1
-#source=(https://archive.mozilla.org/pub/thunderbird/releases/102.2.2/linux-i686/en-US/thunderbird-102.2.2.tar.bz2
-source=(https://ftp.mozilla.org/pub/thunderbird/releases/$version/linux-i686/en-US/thunderbird-$version.tar.bz2
+source=(https://archive.mozilla.org/pub/thunderbird/releases/$version/linux-i686/en-US/thunderbird-$version.tar.xz
 	policies.json thunderbird.desktop)
 
 build() {
