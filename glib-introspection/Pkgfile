@@ -1,0 +1,32 @@
+# Description: glibs introspection data
+# URL: https://www.gtk.org/
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: gobject-introspection
+
+name=glib-introspection
+version=2.86.0
+release=1
+source=(https://download.gnome.org/sources/glib/${version:0:4}/glib-$version.tar.xz)
+
+build() {
+  sed 's|/var/run/dbus|/run/dbus|' -i glib-$version/gio/gdbusaddress.c
+
+  meson setup build glib-$version \
+    --prefix=/usr \
+    --libexecdir=/usr/lib/glib \
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=false \
+    -D b_pie=true \
+    -D nls=disabled \
+    -D selinux=disabled \
+    -D introspection=enabled \
+    -D tests=false \
+    -D man-pages=disabled \
+    -D sysprof=disabled
+
+  meson compile -C build -j ${JOBS:-1}
+  DESTDIR=$PKG meson install -C build
+
+  rm -r $PKG/usr/{bin,include,lib/pkgconfig,lib/{glib*,gio}/,lib/lib*,share/{aclocal,bash-completion,gdb,gettext,glib-2.0}}
+}
