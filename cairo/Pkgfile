@@ -1,0 +1,26 @@
+# Description: A 2D graphics library with support for multiple output devices
+# URL: https://www.cairographics.org/
+# Maintainer: Jose Beneyto, sepen at crux dot nu
+# Depends on: fontconfig glib xorg-libpixman xorg-libxext xorg-libxrender xorg-xcb-util
+
+name=cairo
+version=1.18.4
+release=1
+source=(https://gitlab.freedesktop.org/cairo/cairo/-/archive/$version/$name-$version.tar.bz2)
+
+build() {
+  meson setup build $name-$version $PKGMK_CAIRO \
+    --prefix=/usr \
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=true \
+    -D b_pie=true \
+    -D dwrite=disabled \
+    -D spectre=disabled \
+    -D symbol-lookup=disabled \
+    -D tests=disabled
+  meson compile -C build
+  DESTDIR=$PKG meson install -C build
+
+  chmod +x $PKG/usr/bin/cairo-trace
+}
