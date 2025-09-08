@@ -4,7 +4,7 @@
 # Depends on: gtk3 dbus-glib
 
 name=firefox-bin
-version=140.0.4
+version=142.0.1
 release=1
 source=(http://ftp.mozilla.org/pub/firefox/releases/$version/linux-i686/en-US/firefox-$version.tar.xz \
 	policies.json firefox.desktop)
