@@ -58,6 +58,7 @@ d:fetchmail
 d:libuv
 d:docker-compose
 d:openssl11
+d:freetype
 f:d41d8cd98f00b204e9800998ecf8427e:kubectl/.md5sum
 f:35e4f1d89c9d584883cb9d78ba610b23:kubectl/.footprint
 f:dc4d50295b6f2b14e25dc22a01c6e01f:kubectl/Pkgfile
@@ -291,3 +292,10 @@ f:91f85842d2118003ee465c34259047e6:openssl11/mksslcert.sh
 f:4136aca856c5f87936e4a8c8987412f6:openssl11/.md5sum
 f:7ebbe43e9d8bd0b9f2ded5e10a0b851a:openssl11/.footprint
 f:88a30fd28aa23a8dfb2dfd403b79a8ec:openssl11/Pkgfile
+f:80b1e5901a9bd0a6083b3a0d703474e3:freetype/0004-Enable-long-PCF-family-names.patch
+f:fef731289a0f86933ff2d0b3615c3de0:freetype/freetype2.sh
+f:1f61dac42ebf2cc8544c6b1dbc0eb0bd:freetype/.md5sum
+f:e43902029c480462d01acbebf3118b66:freetype/.footprint
+f:44b9e13ab2d22c7916890fc226550006:freetype/Pkgfile
+f:0692e174b9c5447b52687a65b423d9d4:freetype/0001-Enable-table-validation-modules.patch
+f:1690704de94997b08e079ccef035f540:freetype/0002-Enable-subpixel-rendering.patch
