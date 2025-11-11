@@ -1,28 +1,19 @@
-# crux-ports-i686
+# ⚠️ Repository Archived — Project Discontinued
 
-Unofficial i686 Ports overlay for CRUX 3.5
+> This repository, **crux-ports-i686**, contains the legacy **i686 port overlays** originally maintained for **CRUX 3.5**.  
+> It is now **archived and read-only** — development has been discontinued.
 
-> IMPORTANT NOTE:
-> 
-> The latest release available for CRUX i686 is 3.5. As of this version there is no longer official support for i686 architectures and the official CRUX core, opt, xorg and contrib repositories no longer receive updates for 3.5. This overlay is intended to extend the life of CRUX for the i686 architecture.
-> 
-> The ports in this repository are not official. Use them at your own risk.
+The ports here provided i686 (32-bit x86) support for CRUX 3.5, before official 32-bit builds were dropped.  
+While functional at the time, this collection is now **outdated** and **no longer maintained**.
 
-To use these ports, download the `crux-i686.httpup` file to `/etc/ports`:
-```
-$ sudo wget -P /etc/ports https://raw.githubusercontent.com/sepen/crux-ports-i686/3.5/crux-i686.httpup
-$ sudo ports -u crux-i686
-```
+Active development and updated overlays for newer CRUX versions continue in the **[crux-i686](https://github.com/sepen/crux-i686)** repository:
 
-You may want to list it first in `/etc/prt-get.conf` to take advantage of ports overlay:
-```
-###
-### prt-get conf
-###
+👉 **https://github.com/sepen/crux-i686**
 
-# note: the order matters: the package found first is used
-prtdir /usr/ports/crux-i686
-prtdir /usr/ports/core
-prtdir /usr/ports/opt
-prtdir /usr/ports/xorg
-```
+That project includes:
+- A prebuilt root filesystem: `crux-i686-3.8-rootfs.tar.xz`  
+- Updated overlay collections:  
+  - [core-i686](https://github.com/sepen/crux-ports-core-i686)  
+  - [opt-i686](https://github.com/sepen/crux-ports-opt-i686)  
+  - [xorg-i686](https://github.com/sepen/crux-ports-xorg-i686)  
+- Full alignment with upstream **CRUX 3.8** ports
